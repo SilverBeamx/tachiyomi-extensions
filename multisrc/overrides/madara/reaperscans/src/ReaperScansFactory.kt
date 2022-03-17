@@ -24,6 +24,7 @@ abstract class ReaperScans(
 ) : Madara("Reaper Scans", baseUrl, lang, dateFormat)
 
 class ReaperScansEn : ReaperScans("https://reaperscans.com", "en", SimpleDateFormat("MMM dd,yyyy", Locale.US)) {
+    override val versionId = 2
 
     override fun chapterFromElement(element: Element): SChapter {
         val chapter = SChapter.create()
